@@ -50,6 +50,20 @@ a {
   text-align: center;
 }
 
+@media (max-width: 640px) {
+  .heroGroup {
+    padding: 100px 20px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero p {
+    font-size: 24px;
+  }
+}
+
 /* html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;

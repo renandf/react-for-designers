@@ -5,9 +5,12 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+import Header from "../components/header"
+
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
+    <Header />
     <div className="hero">
       <div className="heroGroup">
         <h1>Learn to design and code React apps</h1>
