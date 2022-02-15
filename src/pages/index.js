@@ -5,7 +5,12 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-import Header from "../components/header"
+import Header from "../components/Header"
+import Card from "../components/Card"
+import CardBg from "../images/wallpaper.jpg"
+import CardBg2 from "../images/wallpaper2.jpg"
+import CardBg3 from "../images/wallpaper3.jpg"
+import CardBg4 from "../images/wallpaper4.jpg"
 
 const IndexPage = () => (
   <Layout>
@@ -88,6 +93,31 @@ const IndexPage = () => (
             alt="Swift logo"
           />
         </div>
+      </div>
+    </div>
+    <div className="cards">
+      <h2>11 course, more coming</h2>
+      <div className="cardGroup">
+        <Card
+          title="Design System"
+          text="10 sections"
+          image={CardBg}
+        />
+        <Card
+          title="React for Designers"
+          text="12 sections"
+          image={CardBg2}
+        />
+        <Card
+          title="Sound Design"
+          text="5 sections"
+          image={CardBg3}
+        />
+        <Card
+          title="ARKit 2"
+          text="9 sections"
+          image={CardBg4}
+        />
       </div>
     </div>
   </Layout>
