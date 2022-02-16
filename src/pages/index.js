@@ -7,10 +7,14 @@ import Seo from "../components/seo"
 
 import Header from "../components/Header"
 import Card from "../components/Card"
+import Section from "../components/Section"
+import Wave from "../components/Wave"
+
 import CardBg from "../images/wallpaper.jpg"
 import CardBg2 from "../images/wallpaper2.jpg"
 import CardBg3 from "../images/wallpaper3.jpg"
 import CardBg4 from "../images/wallpaper4.jpg"
+import logoReact from "../images/logo-react.png"
 
 const IndexPage = () => (
   <Layout>
@@ -33,22 +37,8 @@ const IndexPage = () => (
           <Link to="/page-2/">Go to page 2</Link> <br />
         </p>
         
-        <svg width="100%" height="150" viewBox="0 0 500 100" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill="white">
-            <animate
-              repeatCount="indefinite"
-              fill="freeze"
-              attributeName="d"
-              dur="8s"
-              values="
-              M0 75C0 75 35 0 126 0C217 0 280 86.1487 356 86.1487C432 86.1487 500 38.5135 500 38.5135V150H0V75Z;
+        <Wave />
 
-              M0 23.8684C0 23.8684 57 76 148 76C239 76 271 0 364 0C457 0 500 61 500 61V150H0V23.8684Z;
-
-              M0 75C0 75 35 0 126 0C217 0 280 86.1487 356 86.1487C432 86.1487 500 38.5135 500 38.5135V150H0V75Z
-              " />
-          </path>
-        </svg>
         <div className="logos">
           <StaticImage
             src="../images/logo-sketch.png"
@@ -120,6 +110,12 @@ const IndexPage = () => (
         />
       </div>
     </div>
+    <Section
+      image={CardBg2}
+      logo={logoReact}
+      title="React for Designers"
+      text="Learn how to build a modern site using React and the most efficient libraries to get your site/product outline. Get familiar with components, Grid CSS, animations, interactions, dynamic data with Contentful and deploying your site with Netlify."
+    />
   </Layout>
 )
 
