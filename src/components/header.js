@@ -1,21 +1,30 @@
-import * as React from "react"
+import React, { useEffect, useState } from "react"
 import { Link } from "gatsby"
 
-import "./header.css"
+import "./Header.css"
 import logo from "../images/logo-designcode.svg"
 
-const Header = ({ siteTitle }) => (
-  <header>
-    <div className="headerGroup">
-      <Link to="/">
-        <img src={logo} alt="logo" />
-      </Link>
-      <Link to="/courses">Courses</Link>
-      <Link to="/downloads">Downloads</Link>
-      <Link to="/workshops">Workshpos</Link>
-      <Link to="/buy"><button>Buy</button></Link>
-    </div>
-  </header>
-)
+export default function Header() {
+  const [hasScrolled, setHasScrolled] = useState(false);
 
-export default Header
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setHasScrolled(window.scrollY > 50);
+    });
+  }, []);
+
+  return (
+    <header className={hasScrolled && "headerBg"}>
+      <div className="headerGroup">
+        <Link to="/">
+          <img src={logo} alt="logo" />
+        </Link>
+        <Link to="/courses">Courses</Link>
+        <Link to="/downloads">Downloads</Link>
+        <Link to="/workshops">Workshpos</Link>
+        <Link to="/buy"><button>Buy</button></Link>
+      </div>
+    </header>
+  )
+}
+

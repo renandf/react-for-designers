@@ -3,6 +3,15 @@ header {
   width: 100%;
   padding: 50px 0;
   z-index: 100;
+  transition: background 600ms cubic-bezier(0.2, 0.8, 0.2, 1),
+              padding 600ms cubic-bezier(0.2, 0.8, 0.2, 1),
+              backdrop-filter 600ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.headerBg {
+  background: rgba(0,0,0, 0.6);
+  padding: 15px 0;
+  backdrop-filter: blur(20px);
 }
 
 .headerGroup {
