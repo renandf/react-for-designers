@@ -4,10 +4,24 @@ module.exports = {
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    // Renan: E os keywords? tentei, não consegui adicionar :/
+    keywords:  `react course, react for designers, ios development, sketch app, swift app course, arkit 2, after effects, create sketch plugin`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-source-airtable`,
+      options: {
+        apiKey: `keyTbEvdFCbW531qY`,
+        concurrency: 5,
+        tables: [{
+          baseId: `appWtoGZYzqZKMamx`,
+          tableName: `podcasts_table`,
+          tableView: `all`
+        }]
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

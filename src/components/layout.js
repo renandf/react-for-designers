@@ -5,43 +5,55 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import * as React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+ import * as React from "react"
+ import PropTypes from "prop-types"
+ import { useStaticQuery, graphql } from "gatsby"
+ 
+ import Header from "./Header"
+ import Footer from "./Footer"
+ import "./layout.css"
 
-import Header from "./Header"
-import "./layout.css"
-
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
+ 
+ const Layout = ({ children }) => {
+      const data = useStaticQuery(graphql`
+      query SiteTitleQuery {
+        site {
+          siteMetadata {
+            title
+            author
+            description
+            keywords
+          }
+        }
+       allAirtable (sort: { fields: rowIndex }) {
+          edges {
+            node {
+              data {
+                id
+                number
+                title
+                podcast
+              }
+            }
+          }
         }
       }
-    }
-  `)
+    `);
 
-  return (
-    <>
-      {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} /> */}
-      <main>{children}</main>
-      {/* <footer
-        style={{
-          marginTop: `2rem`,
-        }}
-      >
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
-      </footer> */}
-    </>
-  )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
-
-export default Layout
+   return (
+     <>
+       {<Header siteTitle={data.site.siteMetadata?.title || `Title`} />}
+       <main>{children}</main>
+       {<Footer data={data}> 
+       © {new Date().getFullYear()} {data.site.siteMetadata.title} Built with Gatsby.
+       Backgrounds made in Cinema 4D, i0S app in Swift, site inReact. <a href="mailto: support@designcode.io">Email us</a> to ask anything. </Footer>}
+     </>
+   )
+ }
+ 
+ Layout.propTypes = {
+   children: PropTypes.node.isRequired,
+ }
+ 
+ export default Layout
+ 
