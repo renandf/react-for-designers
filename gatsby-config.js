@@ -18,7 +18,7 @@ module.exports = {
         tables: [{
           baseId: `appWtoGZYzqZKMamx`,
           tableName: `podcasts_table`,
-          tableView: `all`
+          tableView: `footer`
         }]
       },
     },
