@@ -61,10 +61,10 @@ const Footer = ({data, children}) => (
     <Button>Tweet</Button>
     <LinkGroup>
     {
-    // Renan: adicionei o airtable, funciona no Graphql mas não consegui usar os dados
-    //data.allAirtable.edges.map(edge=>(
-    //<a href={edge.node.id}>{edge.node.title}</a>
-    //))
+    // Airtable
+    data.allAirtable.edges.map(edge => (
+        <a href={edge.node.data.id}>{edge.node.data.title}</a>
+    ))
     }</LinkGroup>
     <CopyRight>
         {children}
