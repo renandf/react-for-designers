@@ -22,7 +22,7 @@ export default function Header() {
         <Link to="/courses">Courses</Link>
         <Link to="/downloads">Downloads</Link>
         <Link to="/workshops">Workshpos</Link>
-        <Link to="/buy"><button>Buy</button></Link>
+        <Link to="https://buy.stripe.com/5kAg2C6Sj1ovgxi7su"><button>Buy</button></Link>
       </div>
     </header>
   )
