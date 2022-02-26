@@ -57,7 +57,7 @@ const LinkGroup = styled.div`
 const Footer = ({data, children}) => (
     <FooterGroup>
     <Text>Tweet "Prototype and build apps with React and Swift.
-    New courses by {data.site.siteMetadata.author}"</Text>
+    New courses by {data.site.siteMetadata.author} !Deploying Changes!"</Text>
     <Button>Tweet</Button>
     <LinkGroup>
     {
