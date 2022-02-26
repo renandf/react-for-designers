@@ -1,1 +1,8 @@
 https://unruffled-tereshkova-ae448b.netlify.app/
+
+
+- Deploy doesn't work if not on your own user?
+- To use Airtable updating automatically is necessary to use Zapier, Integromat or another function: 
+https://answers.netlify.com/t/can-you-create-a-webhook-in-netlify/31152/2
+- Try cool! And free :D would work with JSON easily
+- As well, Contentful free :D
