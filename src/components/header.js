@@ -14,23 +14,23 @@ export default function Header() {
     });
   }, []);
 
-  handlePurchase = (token) => {
-    const amount = 5000
-    const description = "My awesome product"
+  // handlePurchase = (token) => {
+  //   const amount = 5000
+  //   const description = "My awesome product"
 
-    const bodyObject = {
-      tokenId: token.id,
-      email: token.email,
-      name: token.name,
-      description,
-      amount
-    }
+  //   const bodyObject = {
+  //     tokenId: token.id,
+  //     email: token.email,
+  //     name: token.name,
+  //     description,
+  //     amount
+  //   }
 
-    fetch('http://localhost:9000/stripe-charge', {
-      method: 'POST',
-      body: JSON.stringify(bodyObject)
-    })
-  }
+  //   fetch('http://localhost:9000/stripe-charge', {
+  //     method: 'POST',
+  //     body: JSON.stringify(bodyObject)
+  //   })
+  // }
 
   return (
     <header className={hasScrolled && "headerBg"}>
@@ -45,7 +45,7 @@ export default function Header() {
         <StripeCheckout
             amount={5000}
             image= {logo}
-            token={this.handlePurchase}
+            // {this.handlePurchase}
             stripeKey={'pk_test_51JzPuzIVUm8xXc3PIHCYlGupuySmt0j4aq9wvUcQ5ZzrX9KPxcaDHMMIIhHe9JkEgN2v77WX5P8du4FpxuEFpMIK00jzCFI97a'}
             >
             <button>Buy</button>
