@@ -42,14 +42,14 @@ export default function Header() {
         <Link to="/downloads">Downloads</Link>
         <Link to="/workshops">Workshpos</Link>
         <Link to="https://buy.stripe.com/5kAg2C6Sj1ovgxi7su"><button>Buy</button></Link>
-        <StripeCheckout
+        {/* <StripeCheckout
             amount={5000}
             image= {logo}
             // {this.handlePurchase}
             stripeKey={'pk_test_51JzPuzIVUm8xXc3PIHCYlGupuySmt0j4aq9wvUcQ5ZzrX9KPxcaDHMMIIhHe9JkEgN2v77WX5P8du4FpxuEFpMIK00jzCFI97a'}
             >
             <button>Buy</button>
-          </StripeCheckout>
+          </StripeCheckout> */}
       </div>
     </header>
   )
