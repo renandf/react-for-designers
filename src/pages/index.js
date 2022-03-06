@@ -6,7 +6,6 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-import Header from "../components/Header"
 import Card from "../components/Card"
 import Section from "../components/Section"
 import Wave from "../components/Wave"
@@ -44,7 +43,6 @@ const SectionCellGroup = styled.div`
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
-    <Header />
     <div className="hero">
       <div className="heroGroup">
         <h1>Learn to design and code React apps</h1>
@@ -143,8 +141,8 @@ const IndexPage = () => (
     />
     <SectionCaption>12 sections - 6 hours</SectionCaption>
     <SectionCellGroup>
-      {staticdata.cells.map(cell => (
-        <Cell title={cell.title} image={cell.image} />
+      {staticdata.cells.map((cell, index) => (
+        <Cell key={index} title={cell.title} image={cell.image} />
       ))}
     </SectionCellGroup>
   </Layout>

@@ -69,7 +69,7 @@ const Footer = ({ data, children }) => (
       {
         // Airtable
         data.allAirtable.edges.map(edge => (
-          <a href={edge.node.data.id}>{edge.node.data.title}</a>
+          <a key={edge.node.data.id} href="#">{edge.node.data.title}</a>
         ))
       }
     </LinkGroup>

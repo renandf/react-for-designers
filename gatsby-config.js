@@ -4,7 +4,6 @@ module.exports = {
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
-    // Renan: E os keywords? tentei, não consegui adicionar :/
     keywords:  `react course, react for designers, ios development, sketch app, swift app course, arkit 2, after effects, create sketch plugin`
   },
   plugins: [
